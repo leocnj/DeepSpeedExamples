@@ -12,7 +12,7 @@ pip install -r requirements.txt
 cd training/step1_supervised_finetuning/
 
 # Run the training script
-ulimit -n 99999 && bash training_scripts/single_node/run_1.3b.sh
+# ulimit -n 99999 && bash training_scripts/single_node/run_1.3b_single.sh
 
 # Evaluate the model
-ulimit -n 99999 && bash evaluation_scripts/run_prompt.sh
+ulimit -n 99999 && bash evaluation_scripts/run_prompt.sh facebook/opt-1.3b output
