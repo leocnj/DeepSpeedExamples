@@ -30,4 +30,4 @@ deepspeed main.py \
    --zero_stage $ZERO_STAGE \
    --deepspeed \
    --output_dir $OUTPUT \
-   &> $OUTPUT/training.log
+   &> >(tee $OUTPUT/training.log)
