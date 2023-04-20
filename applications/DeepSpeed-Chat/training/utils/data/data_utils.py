@@ -21,7 +21,8 @@ def get_raw_dataset(dataset_name, output_path, seed, local_rank):
     if dataset_name == "leocnj/alpaca_dschat":
         return raw_datasets.LeocnjAlpaca_dschatDataset(output_path, seed,
                                                   local_rank)
-    if dataset_name == "Dahoas/rm-static":
+
+    if "Dahoas/rm-static" in dataset_name:
         return raw_datasets.DahoasRmstaticDataset(output_path, seed,
                                                   local_rank, dataset_name)
     elif "Dahoas/full-hh-rlhf" in dataset_name:
