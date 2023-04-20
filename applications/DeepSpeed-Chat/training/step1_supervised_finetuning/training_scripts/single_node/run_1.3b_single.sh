@@ -14,7 +14,7 @@ fi
 mkdir -p $OUTPUT
 
 deepspeed main.py \
-   --data_path Dahoas/rm-static \
+   --data_path leocnj/alpaca_dschat \
    --data_split 2,4,4 \
    --model_name_or_path facebook/opt-1.3b \
    --per_device_train_batch_size 8 \
