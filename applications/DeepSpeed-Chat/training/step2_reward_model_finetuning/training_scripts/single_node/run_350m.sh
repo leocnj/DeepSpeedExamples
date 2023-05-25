@@ -25,10 +25,10 @@ deepspeed main.py \
    --weight_decay 0.1 \
    --num_train_epochs 1 \
    --gradient_accumulation_steps 1 \
-   --lr_scheduler_type cosine \
+   --lr_scheduler_type linear \
    --num_warmup_steps 0 \
    --seed 1234 \
    --zero_stage $ZERO_STAGE \
    --deepspeed \
    --output_dir $OUTPUT \
-   &> $OUTPUT/training.log
+   &> >(tee $OUTPUT/step2_training.log)
