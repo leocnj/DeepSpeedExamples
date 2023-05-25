@@ -18,10 +18,19 @@ pip install -r requirements.txt
 # ulimit -n 99999 && bash evaluation_scripts/run_prompt.sh facebook/opt-1.3b output
 
 # Move into the second step of the pipeline
-cd training/step2_reward_model_finetuning/
+# cd training/step2_reward_model_finetuning/
 
 # Run the training script
-ulimit -n 99999 && bash training_scripts/single_node/run_350m.sh output 2
+# ulimit -n 99999 && bash training_scripts/single_node/run_350m.sh output 2
+
+# Evaluate the model
+# ulimit -n 99999 && bash evaluation_scripts/run_prompt.sh facebook/opt-1.3b output
+
+# Move into the second step of the pipeline
+# cd training/step2_reward_model_finetuning/
+
+# Run the training script
+# ulimit -n 99999 && bash training_scripts/single_node/run_350m.sh output 2
 
 # Evaluate the model
 # ulimit -n 99999 && bash evaluation_scripts/run_prompt.sh facebook/opt-1.3b output
