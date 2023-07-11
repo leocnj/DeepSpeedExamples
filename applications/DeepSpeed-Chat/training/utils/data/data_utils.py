@@ -20,7 +20,7 @@ from . import raw_datasets
 def get_raw_dataset(dataset_name, output_path, seed, local_rank):
     if dataset_name == "leocnj/alpaca_dschat":
         return raw_datasets.LeocnjAlpaca_dschatDataset(output_path, seed,
-                                                  local_rank)
+                                                  local_rank, dataset_name)
 
     if "Dahoas/rm-static" in dataset_name:
         return raw_datasets.DahoasRmstaticDataset(output_path, seed,

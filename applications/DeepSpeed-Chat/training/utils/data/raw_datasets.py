@@ -45,8 +45,8 @@ class PromptRawDataset(object):
 # English dataset
 class LeocnjAlpaca_dschatDataset(PromptRawDataset):
 
-    def __init__(self, output_path, seed, local_rank):
-        super().__init__(output_path, seed, local_rank)
+    def __init__(self, output_path, seed, local_rank, dataset_name):
+        super().__init__(output_path, seed, local_rank, dataset_name)
         self.dataset_name = "leocnj/alpaca_dschat"
         self.dataset_name_clean = "leocnj_alpaca_dschat"
         self.raw_datasets = load_dataset("leocnj/alpaca_dschat")
